@@ -103,6 +103,11 @@ nav ul {
     align-items: baseline;
     margin-bottom: 20px;
 }
+nav ul li {
+    width: auto;
+    margin-right: 8px;
+    text-align: center;
+}
 nav ul a {
     font-size: 2rem;
     text-decoration: none;
@@ -110,7 +115,6 @@ nav ul a {
 }
 nav ul a:hover {
     color:#2F51B6;
-    font-weight: 700;
 }
 nav ul .logo a{
     font-family: 'Raleway', sans-serif;
@@ -120,17 +124,23 @@ nav ul .logo a{
 nav ul #logo a:hover {
     color:#16191d;
 }
-h2.mission-tagline {
+.mission-tagline {
     width: 100%;
-    height: 5rem;
-    font-size: 2rem;
+    min-height: 5rem;
     background-color: #2F51B6;
     color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
+.mission-tagline h2 {
+    width: 90%;
+    font-size: 2.2rem;
+    margin: 10px 0;
+    line-height: 1.4;
+}
 /* Landing Page - Main Styles */
 .intro {
     display: flex;
@@ -181,6 +191,10 @@ h2.mission-tagline {
     flex-direction: column;
     justify-content: space-between;
     width: 45%;
+    min-width: 320px;
+}
+.student {
+    margin-right: 16px;
 }
 .student img, .volunteer img {
     align-self: center; 
@@ -239,11 +253,74 @@ footer {
     background-color: #E3E3E3;
     font-size: 2rem;
 }
-footer .icon-attr p{
+footer icon-attr {
+    width: 75%;
+}
+footer .icon-attr p{ 
     margin: 2rem 0;
     font-size: 1.4rem;
+    text-align: center;
 }
 footer a {
     text-decoration: none;
     color: #16191d;  
+}
+
+/* Media Queries for Responsive Site */
+@media screen and (max-width: 800px){
+  /* updates to navbar */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-around;
+    }
+    nav ul li#logo {
+        width: 100%;
+    }
+    nav ul li#logo a{
+       font-size: 3.6rem;
+    }
+    nav ul li#logo img {
+        height: 3.6rem
+    }
+    nav ul li {
+        width: 30%;
+        margin-bottom: 1.6rem;
+        text-align: center;
+    }
+    nav ul li#signin{
+        align-self: flex-end;
+    }
+
+    /* make intro section single column */
+    .intro {
+        flex-direction: column;
+    }
+    .intro-text, .intro-img {
+       width: 80%;
+       margin-bottom: 25px;
+    }
+
+    .student button,.volunteer button {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    /* increased width of intro and student-volunteer sections */
+    .intro-text, .intro-img {
+        width: 90%;
+    }
+    .student, .volunteer {
+        width: 90%;
+    }
+    .student button,.volunteer button {
+        margin-bottom: 20px;
+    }
+    footer {
+        padding-bottom: 25px;
+    }
 }
