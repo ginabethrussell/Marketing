@@ -78,6 +78,7 @@ button.cta {
     border: none;
     font-size: 2rem;
     font-family:"Open sans", 'sans-serif';
+    transition: all 0.25s;
 }
 button.cta:hover {
     background-color: #2F51B6;
@@ -109,20 +110,24 @@ nav ul li {
     text-align: center;
 }
 nav ul a {
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-decoration: none;
     color:#16191d;
+    transition: all 0.25s;
 }
 nav ul a:hover {
     color:#2F51B6;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2F51B6;
 }
 nav ul .logo a{
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
 }
 nav ul #logo a:hover {
     color:#16191d;
+    border: none;
 }
 .mission-tagline {
     width: 100%;
@@ -134,7 +139,6 @@ nav ul #logo a:hover {
     align-items: center;
     text-align: center;
 }
-
 .mission-tagline h2 {
     width: 90%;
     font-size: 2.2rem;
@@ -271,25 +275,34 @@ footer a {
   /* updates to navbar */
     nav ul {
         flex-wrap: wrap;
-        justify-content: center;
-        align-content: space-around;
+        align-content: space-evenly;
     }
     nav ul li#logo {
         width: 100%;
+        margin-bottom: 16px;
+        margin-right: 0;
     }
     nav ul li#logo a{
-       font-size: 3.6rem;
+       font-size: 2.4rem;
     }
     nav ul li#logo img {
-        height: 3.6rem
+        height: 2.4rem
     }
     nav ul li {
-        width: 30%;
         margin-bottom: 1.6rem;
-        text-align: center;
+        margin-right: 0;
+        width: 30%;
     }
-    nav ul li#signin{
-        align-self: flex-end;
+    nav ul li#signin {
+        width: 45%;
+        text-align:right;
+    }
+    nav ul li#signup {
+        width: 45%;
+        text-align: left;
+    }
+    nav ul li a{
+        font-size: 18px;
     }
 
     /* make intro section single column */
@@ -309,6 +322,44 @@ footer a {
 }
 
 @media screen and (max-width: 500px){
+    nav ul {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul li {
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 90%;
+    }
+    nav ul li#logo{
+        margin-bottom: 22px;
+        margin-right: 0;
+     }
+     nav ul li#logo img {
+         height: 2.2rem
+     }
+    nav ul li#logo a{
+        font-size: 2.4rem;
+     }
+     nav ul li#logo img {
+         height: 2.4rem
+     }
+    nav ul li#signin {
+        width: auto;
+        text-align: center;
+    }
+    nav ul li#signup {
+        width: auto;
+        text-align: center;
+    }
+    nav ul li a {
+        font-size: 2rem;
+    }
+    nav ul li.logo a {
+        font-size: 2.2rem;
+    }
 
     /* increased width of intro and student-volunteer sections */
     .intro-text, .intro-img {
