@@ -220,11 +220,16 @@ nav ul #logo a:hover {
     align-self: center;
 }
 
+.subjects {
+    width: 100%;
+}
 .subjects h2 {
+    width: 90%;
+    margin: 0 auto;
     margin-top: 2.5rem;
     font-size: 2.4rem;
     text-align: center;
-   font-style: italic;
+    font-style: italic;
 }
 .subjects-grid {
     display: flex;
@@ -414,11 +419,16 @@ nav ul #logo.home a:hover {
          width: 80%;
          margin-bottom: 25px;
       }
-  
       .student button,.volunteer button {
           width: 60%;
           margin-bottom: 20px;
       }
+      .subjects-grid {
+          width: 75%;
+      }
+      .subjects-grid .subject {
+        width: 50%;
+    }
       /* About page styles */
       .team .team-grid .teammate {
         width: 45%;
