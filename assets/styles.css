@@ -270,112 +270,6 @@ footer a {
     color: #16191d;  
 }
 
-/* Media Queries for Responsive Site */
-@media screen and (max-width: 800px){
-  /* updates to navbar */
-    nav ul {
-        flex-wrap: wrap;
-        align-content: space-evenly;
-    }
-    nav ul li#logo {
-        width: 100%;
-        margin-bottom: 16px;
-        margin-right: 0;
-    }
-    nav ul li#logo a{
-       font-size: 2.4rem;
-    }
-    nav ul li#logo img {
-        height: 2.4rem
-    }
-    nav ul li {
-        margin-bottom: 1.6rem;
-        margin-right: 0;
-        width: 30%;
-    }
-    nav ul li#signin {
-        width: 45%;
-        text-align:right;
-    }
-    nav ul li#signup {
-        width: 45%;
-        text-align: left;
-    }
-    nav ul li a{
-        font-size: 18px;
-    }
-
-    /* make intro section single column */
-    .intro {
-        flex-direction: column;
-    }
-    .intro-text, .intro-img {
-       width: 80%;
-       margin-bottom: 25px;
-    }
-
-    .student button,.volunteer button {
-        width: 60%;
-        margin-bottom: 20px;
-    }
-
-}
-
-@media screen and (max-width: 500px){
-    nav ul {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-    }
-    nav ul li {
-        margin-bottom: 20px;
-        margin-right: 0;
-        width: 90%;
-    }
-    nav ul li#logo{
-        margin-bottom: 22px;
-        margin-right: 0;
-     }
-     nav ul li#logo img {
-         height: 2.2rem
-     }
-    nav ul li#logo a{
-        font-size: 2.4rem;
-     }
-     nav ul li#logo img {
-         height: 2.4rem
-     }
-    nav ul li#signin {
-        width: auto;
-        text-align: center;
-    }
-    nav ul li#signup {
-        width: auto;
-        text-align: center;
-    }
-    nav ul li a {
-        font-size: 2rem;
-    }
-    nav ul li.logo a {
-        font-size: 2.2rem;
-    }
-
-    /* increased width of intro and student-volunteer sections */
-    .intro-text, .intro-img {
-        width: 90%;
-    }
-    .student, .volunteer {
-        width: 90%;
-    }
-    .student button,.volunteer button {
-        margin-bottom: 20px;
-    }
-    footer {
-        padding-bottom: 25px;
-    }
-}
-
 /* About Page Styles */
 
 /* Navbar - Make logo li active */
@@ -437,7 +331,7 @@ nav ul #logo.home a:hover {
 }
 
 .team .team-grid{
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -470,9 +364,139 @@ nav ul #logo.home a:hover {
     line-height: 1.2;
     letter-spacing: 1.5px;
 }
-.teammate .social-icons {
-    /* align-self: center; */
-}
+
 .teammate .social-icons img {
     margin: 8px;
 }
+
+/* Media Queries for Responsive Site */
+@media screen and (max-width: 800px){
+    /* Styles across pages */
+
+    /* updates to navbar */
+      nav ul {
+          flex-wrap: wrap;
+          align-content: space-evenly;
+      }
+      nav ul li#logo {
+          width: 100%;
+          margin-bottom: 16px;
+          margin-right: 0;
+      }
+      nav ul li#logo a{
+         font-size: 2.4rem;
+      }
+      nav ul li#logo img {
+          height: 2.4rem
+      }
+      nav ul li {
+          margin-bottom: 1.6rem;
+          margin-right: 0;
+          width: 30%;
+      }
+      nav ul li#signin {
+          width: 45%;
+          text-align:right;
+      }
+      nav ul li#signup {
+          width: 45%;
+          text-align: left;
+      }
+      nav ul li a{
+          font-size: 18px;
+      }
+  /* Landing page styles */
+      /* make intro section single column */
+      .intro {
+          flex-direction: column;
+      }
+      .intro-text, .intro-img {
+         width: 80%;
+         margin-bottom: 25px;
+      }
+  
+      .student button,.volunteer button {
+          width: 60%;
+          margin-bottom: 20px;
+      }
+      /* About page styles */
+      .team .team-grid .teammate {
+        width: 45%;
+      }
+      .mission {
+        width: 70%;
+      }
+      .mission button.cta {
+        width: 35%;
+  }
+  
+  @media screen and (max-width: 500px){
+      /* Styles across pages */
+      nav ul {
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: center;
+      }
+      nav ul li {
+          margin-bottom: 20px;
+          margin-right: 0;
+          width: 90%;
+      }
+      nav ul li#logo{
+          margin-bottom: 22px;
+          margin-right: 0;
+       }
+       nav ul li#logo img {
+           height: 2.2rem
+       }
+      nav ul li#logo a{
+          font-size: 2.4rem;
+       }
+       nav ul li#logo img {
+           height: 2.4rem
+       }
+      nav ul li#signin {
+          width: auto;
+          text-align: center;
+      }
+      nav ul li#signup {
+          width: auto;
+          text-align: center;
+      }
+      nav ul li a {
+          font-size: 2rem;
+      }
+      nav ul li.logo a {
+          font-size: 2.2rem;
+      }
+  
+      /* Landing page styles */
+      /* increased width of intro and student-volunteer sections */
+      .intro-text, .intro-img {
+          width: 90%;
+      }
+      .student, .volunteer {
+          width: 90%;
+      }
+      .student button,.volunteer button {
+          margin-bottom: 20px;
+      }
+      footer {
+          padding-bottom: 25px;
+      }
+
+       /* About page styles */
+       .team .team-grid .teammate {
+        width: 75%;
+      }
+      .mission {
+        width: 80%;
+      }
+      .mission h1 {
+          align-self: center;
+      }
+      .mission button.cta {
+          width: 40%;
+      }
+  }
