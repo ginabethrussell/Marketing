@@ -379,7 +379,7 @@ nav ul #logo.home a:hover {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-around;
-}
+}  
 .team .team-grid .teammate {
     width: 30%;
     display: flex;
@@ -389,7 +389,10 @@ nav ul #logo.home a:hover {
     background-color: #efefef;
     padding: 20px 10px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.10);
+    border-radius: 16px;
 }
 .teammate figcaption  {
     margin-top: 10px;
