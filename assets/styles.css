@@ -357,8 +357,10 @@ nav ul #logo.home a:hover {
 .team .team-title {
     width: 100%;
     min-height: 7rem;
-    background: #E3E3E3;
-    color: #16191d;
+    /* background: #E3E3E3;
+    color: #16191d; */
+    background-color: #2F51B6;
+    color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
