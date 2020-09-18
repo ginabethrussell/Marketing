@@ -70,12 +70,15 @@ html{
     font-weight: 600;
     font-size: 2.4rem;
 }
+.material-icons {
+    padding-right: 5px;
+}
 button.cta {
     width: 50%;
     padding: 5px 10px;
     background-color: #feac06;
     border-radius: 5px;
-    border: none;
+    border: 1px solid transparent;
     font-size: 2rem;
     font-family:"Open sans", 'sans-serif';
     transition: all 0.25s;
@@ -128,6 +131,37 @@ nav ul .logo a{
 nav ul #logo a:hover {
     color:#16191d;
     border: none;
+}
+nav ul li#login a{
+    border: 1px solid #2F51B6;
+    background-color: transparent;
+    color: #2F51B6;
+    padding: 5px 10px;
+    border-radius:25px;
+    transition: all 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li#login a:hover{
+    background-color: #2F51B6;
+    color: #f9f9f9;
+}
+nav ul li#signup a{
+    border: 1px solid #2F51B6;
+    background-color: #2F51B6;
+    color: #f9f9f9;
+    padding: 5px 10px;
+    border-radius:25px;
+    transition: all 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+nav ul li#signup a:hover{
+    background-color:#f9f9f9;
+    color: #2F51B6;
 }
 .mission-tagline {
     width: 100%;
@@ -374,6 +408,32 @@ nav ul #logo.home a:hover {
     margin: 8px;
 }
 
+/* Added media query for nav buttons */
+@media screen and (max-width: 925px){
+    nav ul {
+        flex-wrap: wrap;
+        align-content: space-evenly;
+    }
+    nav ul li#login {
+        width: 45%;
+        margin-top: 16px;
+        display: flex;
+       justify-content: flex-end;
+    }
+    nav ul li#login a{
+        width: 40%;
+    }
+    nav ul li#signup {
+        width: 45%;
+        margin-top: 16px;
+        display: flex;
+       justify-content: flex-start;
+    }
+    nav ul li#signup a{
+        width: 40%;
+    }
+}
+
 /* Media Queries for Responsive Site */
 @media screen and (max-width: 800px){
     /* Styles across pages */
@@ -399,7 +459,7 @@ nav ul #logo.home a:hover {
           margin-right: 0;
           width: 30%;
       }
-      nav ul li#signin {
+      nav ul li#login {
           width: 45%;
           text-align:right;
       }
@@ -440,6 +500,18 @@ nav ul #logo.home a:hover {
         width: 35%;
   }
   
+  /* Added media query for nav buttons */
+@media screen and (max-width: 725px){
+    nav ul li#login a{
+        width: 60%;
+        max-width: 150px;
+    }  
+    nav ul li#signup a{
+        width: 60%;
+        max-width: 150px;
+    }
+}
+
   @media screen and (max-width: 500px){
       /* Styles across pages */
       nav ul {
@@ -466,20 +538,25 @@ nav ul #logo.home a:hover {
        nav ul li#logo img {
            height: 2.4rem
        }
-      nav ul li#signin {
-          width: auto;
-          text-align: center;
+      nav ul li#login {
+          width: 50%;
+          min-width: 120px;
+          justify-content: center;
       }
       nav ul li#signup {
-          width: auto;
-          text-align: center;
+          width: 50%;
+          justify-content: center;
+      }
+      nav ul li#login a,nav ul li#signup a {
+          min-width: 120px;
       }
       nav ul li a {
-          font-size: 2rem;
+          font-size: 1.8rem;
       }
       nav ul li.logo a {
-          font-size: 2.2rem;
+          font-size: 1.8rem;
       }
+     
   
       /* Landing page styles */
       /* increased width of intro and student-volunteer sections */
@@ -510,3 +587,4 @@ nav ul #logo.home a:hover {
           width: 40%;
       }
   }
+}
