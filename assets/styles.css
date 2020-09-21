@@ -149,6 +149,10 @@ nav ul li#login a:hover{
     background-color: #2F51B6;
     color: #f9f9f9;
 }
+nav ul li #toggle {
+    display: none;
+    width: 4rem;
+}
 nav ul li#signup a{
     border: 1px solid #2F51B6;
     background-color: #2F51B6;
@@ -163,6 +167,14 @@ nav ul li#signup a{
 nav ul li#signup a:hover{
     background-color:#f9f9f9;
     color: #2F51B6;
+}
+.responsive-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.responsive-nav li {
+    padding-right: 8px;
 }
 /* Mission Tagline across entire page */
 .mission-tagline {
@@ -357,8 +369,6 @@ nav ul #logo.home a:hover {
 .team .team-title {
     width: 100%;
     min-height: 7rem;
-    /* background: #E3E3E3;
-    color: #16191d; */
     background-color: #2F51B6;
     color: #f9f9f9;
     display: flex;
@@ -415,6 +425,7 @@ nav ul #logo.home a:hover {
 .teammate .social-icons img {
     margin: 8px;
 }
+
 
 /* Contact Page Styles */
 
@@ -496,9 +507,10 @@ nav ul #logo.home a:hover {
     margin-bottom: 25px;
 }
   
-/* Media Queries for Responsive Site */
-@media screen and (max-width: 800px){
-  /* updates to navbar */
+/* Responsive Styles */
+
+/* Added media query for nav buttons to wrap at < 975px */
+@media screen and (max-width: 975px){
     nav ul {
         flex-wrap: wrap;
         align-content: space-evenly;
@@ -517,12 +529,13 @@ nav ul #logo.home a:hover {
     }
 }
 
+
 /* Media Queries for Responsive Site */
 @media screen and (max-width: 800px){
 
     /* updates to navbar */
     nav ul li#logo {
-        width: 100%;
+        width: 50%;
         margin-bottom: 16px;
         margin-right: 0;
     }
@@ -547,6 +560,27 @@ nav ul #logo.home a:hover {
     }
     nav ul li a{
         font-size: 18px;
+    }
+    .responsive-nav {
+        display: none;
+    }
+    .responsive-nav.active {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        order: 1;
+    }
+    .responsive-nav.active li {
+        margin-top: 10px;
+    }
+    nav ul li.toggle-menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul li  span#toggle {
+        display: flex;
+        font-size: 4rem;
+        justify-content: flex-end;
     }
 
     /* Landing page styles */
@@ -588,10 +622,24 @@ nav ul #logo.home a:hover {
         max-width: 150px;
     }  
 }
+/* Responsive styles for responsive menu */
+@media screen and (max-width: 570px){
+    .responsive-nav.active {
+       flex-direction: column;
+       align-items: center;
+    }
+    .responsive-nav.active li {
+       width: 100%;
+    }
+}
 
 /* Responsive styles at < 500px  */
 @media screen and (max-width: 500px){
     /* Styles across pages */
+    nav ul li.toggle-menu {
+        order: -1;
+        align-self: flex-end;
+    }
     nav ul {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -599,6 +647,11 @@ nav ul #logo.home a:hover {
         justify-content: center;
     }
     nav ul li {
+        margin-right: 0;
+        width: 40%;
+    }
+    nav ul li#logo{
+        width: 100%;
         margin-bottom: 20px;
         margin-right: 0;
         width: 90%;

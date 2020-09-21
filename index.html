@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;600&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -21,9 +22,14 @@
             <nav>
                 <ul>
                     <li id="logo"><a href="#"><img src="assets/up-24.png" alt="logo up arrow"><a href="#">upGrade Tutors</a></li>
-                    <li><a href="#">Enroll in Tutoring</a></li>
-                    <li><a href="#">Become a Tutor</a></li>
-                    <li><a href="about.html">Partner with Us</a></li>
+                    <li class="toggle-menu"><span id="toggle" class="material-icons">
+                        menu
+                    </span></li>
+                    <div id="responsive-nav" class="responsive-nav">
+                        <li><a href="#">Enroll in Tutoring</a></li>
+                        <li><a href="#">Become a Tutor</a></li>
+                        <li><a href="about.html">Partner with Us</a></li>
+                    </div>
                     <li id="login" class="logo"><a href="#"><span class="material-icons">
                                 login
                             </span>Log In</a></li>
@@ -131,6 +137,7 @@
             <p>&copy; 2020 <img src="assets/up-24.png" alt="logo up arrow"><span class="logo">upGrade Tutors</span></p>
         </footer>
     </div>
+    <script src=navbar.js></script>
 </body>
 
 </html>
