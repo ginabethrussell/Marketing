@@ -369,8 +369,6 @@ nav ul #logo.home a:hover {
 .team .team-title {
     width: 100%;
     min-height: 7rem;
-    /* background: #E3E3E3;
-    color: #16191d; */
     background-color: #2F51B6;
     color: #f9f9f9;
     display: flex;
@@ -428,6 +426,87 @@ nav ul #logo.home a:hover {
     margin: 8px;
 }
 
+
+/* Contact Page Styles */
+
+.contact .intro-text h1 {
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+.contact .question {
+    color: #feac06;
+    margin-right: 10px;
+}
+.contact-form {
+    width: 100%;
+    margin: 0 auto;
+    background: #2F51B6;
+    color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+.contact h2 {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    font-family: Raleway, 'sans-serif';
+    font-weight: 600;;
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+.contact-form form{
+    width: 90%;
+    min-width: 330px;
+    margin: 0 auto;
+    background-color: #E3E3E3;
+    color: #16191d;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-group {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;    
+    padding: 16px;
+}
+.form-group label, .form-group h3 {
+    font-size: 1.6rem;
+    margin-right: 8px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+}
+
+.form-group input{ 
+    font-size: 1.6rem;
+    padding: 8px 16px;
+}
+.form-group select {
+    font-size: 1.6rem;
+    padding: 8px 16px;
+} 
+.form-group textarea {
+    width: 100%;
+    resize: none;
+}
+.form-group button {
+    max-width: 150px;
+    margin-bottom: 25px;
+}
+  
 /* Responsive Styles */
 
 /* Added media query for nav buttons to wrap at < 975px */
@@ -449,6 +528,7 @@ nav ul #logo.home a:hover {
        justify-content: flex-start;
     }
 }
+
 
 /* Media Queries for Responsive Site */
 @media screen and (max-width: 800px){
@@ -567,12 +647,16 @@ nav ul #logo.home a:hover {
         justify-content: center;
     }
     nav ul li {
-        /* margin-bottom: 20px; */
         margin-right: 0;
         width: 40%;
     }
     nav ul li#logo{
         width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 90%;
+    }
+    nav ul li#logo{
         margin-bottom: 22px;
         margin-right: 0;
     }
@@ -628,3 +712,4 @@ nav ul #logo.home a:hover {
         width: 40%;
     }
 }
+
