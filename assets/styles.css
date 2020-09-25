@@ -401,16 +401,12 @@ nav ul #logo.home a:hover {
     background-color: #efefef;
     padding: 20px 10px;
     margin-bottom: 20px;
-    /* border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.10);
-    border-radius: 16px; */
     box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
     transition: box-shadow 83ms;
 }
 .teammate figcaption  {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 1.8rem;
     text-align: center;
     line-height: 1.2;
     font-family: Raleway, 'sans-serif';
@@ -425,7 +421,13 @@ nav ul #logo.home a:hover {
 .teammate .social-icons img {
     margin: 8px;
 }
-
+.teammate img.in-text {
+    height: 1.6rem;
+}
+.teammate .in-text-logo {
+    font-family: Raleway, sans-serif;
+    font-weight: 600;
+}
 
 /* Contact Page Styles */
 
@@ -613,6 +615,23 @@ nav ul #logo.home a:hover {
     .mission button.cta {
     width: 35%;
     }   
+    /* Contact Us Form */
+    .form-group {
+        padding: 0;
+    }
+    .form-group div{
+        display: flex;
+        flex-direction: column;  
+    }
+    .form-group div.role {
+        width: 100%;
+    }
+    
+    .form-group .item .radio {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    } */
 }
 
 /* Added media query for nav buttons */
