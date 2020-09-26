@@ -1,0 +1,734 @@
+/* Implement CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Begin Stylesheet - Shared Styles */
+
+/* set up font-size 1rem = 10px */
+html{
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto; 
+    margin-top: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color:#16191d;
+}
+.logo, #logo a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+.material-icons {
+    padding-right: 5px;
+}
+button.cta {
+    width: 50%;
+    padding: 5px 10px;
+    background-color: #feac06;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 2rem;
+    font-family:"Open sans", 'sans-serif';
+    transition: all 0.25s;
+}
+button.cta:hover {
+    background-color: #2F51B6;
+    color: #f9f9f9;
+}
+img {
+    border-radius: 5px;
+}
+figcaption.attribution{
+    font-size: 1.4rem;
+}
+figcaption.attribution a {
+    text-decoration: none;
+    color: #6e6e6e;
+}
+
+/* Header Styles */
+nav ul {
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+nav ul li {
+    width: auto;
+    margin-right: 8px;
+    text-align: center;
+}
+nav ul a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color:#16191d;
+    transition: all 0.25s;
+}
+nav ul a:hover {
+    color:#2F51B6;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2F51B6;
+}
+nav ul .logo a{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+nav ul #logo a:hover {
+    color:#16191d;
+    border: none;
+}
+/* Style login and signup links as buttons */
+nav ul li#login a{
+    border: 1px solid #2F51B6;
+    background-color: transparent;
+    color: #2F51B6;
+    padding: 5px 10px;
+    border-radius:25px;
+    transition: all 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li#login a:hover{
+    background-color: #2F51B6;
+    color: #f9f9f9;
+}
+nav ul li #toggle {
+    display: none;
+    width: 4rem;
+}
+nav ul li#signup a{
+    border: 1px solid #2F51B6;
+    background-color: #2F51B6;
+    color: #f9f9f9;
+    padding: 5px 10px;
+    border-radius:25px;
+    transition: all 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li#signup a:hover{
+    background-color:#f9f9f9;
+    color: #2F51B6;
+}
+.responsive-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.responsive-nav li {
+    padding-right: 8px;
+}
+/* Mission Tagline across entire page */
+.mission-tagline {
+    width: 100%;
+    min-height: 5rem;
+    background-color: #2F51B6;
+    color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.mission-tagline h2 {
+    width: 90%;
+    font-size: 2.2rem;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 2%;
+    background-color: #E3E3E3;
+    font-size: 2rem;
+}
+footer icon-attr {
+    width: 75%;
+}
+footer .icon-attr p{ 
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color: #16191d;  
+}
+
+/* Landing Page - Main Section Styles */
+
+/* Intro Section */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 25px auto;
+}
+.intro-text{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 20px;
+    line-height:1.2;  
+}
+.intro-text h1 {
+    font-family: 'Open sans', 'sans-serif';
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.intro-text p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height:1.2;
+    letter-spacing: 1.5px;
+}
+.intro-text button {
+    align-self: center;
+}
+.intro-img{
+    width: 55%;
+}
+.intro-img img {
+    width: 100%;
+}
+/* Student Volunteer Section */
+.student-volunteer {
+    width: 100%;
+    background-color: #E3E3E3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2.5%;
+}
+.student, .volunteer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    min-width: 320px;
+}
+.student {
+    margin-right: 16px;
+}
+.student img, .volunteer img {
+    align-self: center; 
+    width: 100%; 
+}
+/* Adjusted for size difference in image heights */
+.volunteer img {
+    padding: 0.7rem 0;
+}
+.student p, .volunteer p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height:1.2;
+    letter-spacing: 1.5px;
+    padding: 1.8rem 0;
+}
+.student button,.volunteer button {
+    align-self: center;
+}
+/* Subject Grid Section */
+.subjects {
+    width: 100%;
+}
+.subjects h2 {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    font-size: 2.4rem;
+    text-align: center;
+    font-style: italic;
+}
+.subjects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    width: 90%;
+    margin: 25px auto;
+}
+.subjects-grid .subject {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+.subject p {
+    margin-top: 1.6rem;
+    font-size: 2rem;
+}
+
+/* About Page Styles */
+
+/* Navbar - Make logo li active to link back to landing page*/
+nav ul #logo.home a:hover {
+    color:#2F51B6;
+    border-bottom: 2px solid #2F51B6;
+}
+
+/* Mission/Values Section */
+.mission {
+    width: 60%;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.mission h1{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-family: 'Open sans', 'sans-serif';
+    font-weight: 600;
+}
+.mission p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height:1.2;
+    letter-spacing: 1.5px;
+}
+.mission button.cta {
+    width: 30%;
+    align-self: center;
+    margin-top: 25px;
+}
+/* Meet the Team Section */
+.team {
+    width: 100%;
+}
+.team .team-title {
+    width: 100%;
+    min-height: 7rem;
+    background-color: #2F51B6;
+    color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.team .team-title h2 {
+    width: 90%;
+    font-size: 2.2rem;
+    margin: 10px 0;
+    line-height: 1.4;
+    font-weight: 700;
+}
+.team .team-grid{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+}  
+.team .team-grid .teammate {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    background-color: #efefef;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    transition: box-shadow 83ms;
+}
+.teammate figcaption  {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 1.2;
+    font-family: Raleway, 'sans-serif';
+    font-weight: 600;
+}
+.teammate p {
+    width: 90%;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+}
+.teammate .social-icons img {
+    margin: 8px;
+}
+.teammate img.in-text {
+    height: 1.6rem;
+}
+.teammate .in-text-logo {
+    font-family: Raleway, sans-serif;
+    font-weight: 600;
+}
+
+/* Contact Page Styles */
+
+.contact .intro-text h1 {
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+.contact .question {
+    color: #feac06;
+    margin-right: 10px;
+}
+.contact-form {
+    width: 100%;
+    margin: 0 auto;
+    background: #2F51B6;
+    color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+.contact h2 {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    font-family: Raleway, 'sans-serif';
+    font-weight: 600;;
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+.contact-form form{
+    width: 90%;
+    min-width: 330px;
+    margin: 0 auto;
+    background-color: #E3E3E3;
+    color: #16191d;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-group {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;    
+    padding: 16px;
+}
+.form-group label, .form-group h3 {
+    font-size: 1.6rem;
+    margin-right: 8px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+}
+
+.form-group input{ 
+    font-size: 1.6rem;
+    padding: 8px 16px;
+}
+.form-group select {
+    font-size: 1.6rem;
+    padding: 8px 16px;
+} 
+.form-group textarea {
+    width: 100%;
+    resize: none;
+}
+.form-group button {
+    max-width: 150px;
+    margin-bottom: 25px;
+}
+  
+/* Responsive Styles */
+
+/* Added media query for nav buttons to wrap at < 975px */
+@media screen and (max-width: 975px){
+    nav ul {
+        flex-wrap: wrap;
+        align-content: space-evenly;
+    }
+    nav ul li#login, nav ul li#signup {
+        width: 45%;
+        margin-top: 16px;
+        display: flex;
+       justify-content: flex-end;
+    }
+    nav ul li#login a, nav ul li#signup a{
+        width: 40%;
+    }
+    nav ul li#signup {
+       justify-content: flex-start;
+    }
+}
+
+
+/* Media Queries for Responsive Site */
+@media screen and (max-width: 800px){
+
+    /* updates to navbar */
+    nav ul li#logo {
+        width: 50%;
+        margin-bottom: 16px;
+        margin-right: 0;
+    }
+    nav ul li#logo a{
+        font-size: 2.4rem;
+    }
+    nav ul li#logo img {
+        height: 2.4rem
+    }
+    nav ul li {
+        margin-bottom: 1.6rem;
+        margin-right: 0;
+        width: 30%;
+    }
+    nav ul li#login {
+        width: 45%;
+        text-align:right;
+    }
+    nav ul li#signup {
+        width: 45%;
+        text-align: left;
+    }
+    nav ul li a{
+        font-size: 18px;
+    }
+    .responsive-nav {
+        display: none;
+    }
+    .responsive-nav.active {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        order: 1;
+    }
+    .responsive-nav.active li {
+        margin-top: 10px;
+    }
+    nav ul li.toggle-menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul li  span#toggle {
+        display: flex;
+        font-size: 4rem;
+        justify-content: flex-end;
+    }
+
+    /* Landing page styles */
+    /* make intro section single column */
+    .intro {
+        flex-direction: column;
+    }
+    .intro-text, .intro-img {
+        width: 80%;
+        margin-bottom: 25px;
+    }
+    .student button,.volunteer button {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    .subjects-grid {
+        width: 75%;
+    }
+    .subjects-grid .subject {
+        width: 50%;
+    }
+    /* About page styles */
+    /* Make team display 2 columns */
+    .team .team-grid .teammate {
+    width: 45%;
+    }
+    .mission {
+    width: 70%;
+    }
+    .mission button.cta {
+    width: 35%;
+    }   
+    /* Contact Us Form */
+    .form-group {
+        padding: 0;
+    }
+    .form-group div{
+        display: flex;
+        flex-direction: column;  
+    }
+    .form-group div.role {
+        width: 100%;
+    }
+    
+    .form-group .item .radio {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    } */
+}
+
+/* Added media query for nav buttons */
+@media screen and (max-width: 725px){
+    nav ul li#login a, nav ul li#signup a{
+        width: 60%;
+        max-width: 150px;
+    }  
+}
+/* Responsive styles for responsive menu */
+@media screen and (max-width: 570px){
+    .responsive-nav.active {
+       flex-direction: column;
+       align-items: center;
+    }
+    .responsive-nav.active li {
+       width: 100%;
+    }
+}
+
+/* Responsive styles at < 500px  */
+@media screen and (max-width: 500px){
+    /* Styles across pages */
+    nav ul li.toggle-menu {
+        order: -1;
+        align-self: flex-end;
+    }
+    nav ul {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul li {
+        margin-right: 0;
+        width: 40%;
+    }
+    nav ul li#logo{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 90%;
+    }
+    nav ul li#logo{
+        margin-bottom: 22px;
+        margin-right: 0;
+    }
+    nav ul li#logo a{
+        font-size: 2.4rem;
+    }
+    nav ul li#logo img {
+        height: 2.4rem
+    }
+    nav ul li#login, nav ul li#signup {
+        width: 50%;
+        justify-content: center;
+    }
+    
+    nav ul li#login a,nav ul li#signup a {
+        min-width: 120px;
+    }
+    nav ul li a {
+        font-size: 1.8rem;
+    }
+    nav ul li.logo a {
+        font-size: 1.8rem;
+    }
+     
+    /* modified footer */
+    footer {
+        padding-bottom: 25px;
+    }
+
+    /* Landing page styles */
+    /* increased width of intro and student-volunteer sections */
+    .intro-text, .intro-img {
+        width: 90%;
+    }
+    .student, .volunteer {
+        width: 90%;
+    }
+    .student button,.volunteer button {
+        margin-bottom: 20px;
+    }
+    
+    /* About page styles */
+    .team .team-grid .teammate {
+    width: 75%;
+    }
+    .mission {
+    width: 80%;
+    }
+    .mission h1 {
+        align-self: center;
+    }
+    .mission button.cta {
+        width: 40%;
+    }
+}
+
